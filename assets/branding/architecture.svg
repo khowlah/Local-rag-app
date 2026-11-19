@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F0C20"/>
+      <stop offset="100%" stop-color="#1A153B"/>
+    </linearGradient>
+    <linearGradient id="flutterCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#2E1065"/>
+    </linearGradient>
+    <linearGradient id="fastapiCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064E3B"/>
+      <stop offset="100%" stop-color="#022C22"/>
+    </linearGradient>
+    <linearGradient id="aiCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B0764"/>
+      <stop offset="100%" stop-color="#581C87"/>
+    </linearGradient>
+    <filter id="shadowBox">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas -->
+  <rect width="1000" height="480" rx="20" fill="url(#bgBox)" stroke="#312E81" stroke-width="2"/>
+
+  <!-- Diagram Title -->
+  <text x="500" y="45" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="22" fill="#F8FAFC" text-anchor="middle" letter-spacing="1">
+    End-to-End System Architecture (مخطط المعمارية الهندسية)
+  </text>
+
+  <!-- COLUMN 1: Flutter Client -->
+  <g transform="translate(40, 80)" filter="url(#shadowBox)">
+    <rect width="250" height="350" rx="16" fill="url(#flutterCard)" stroke="#818CF8" stroke-width="2"/>
+    <rect x="20" y="20" width="210" height="36" rx="8" fill="#4338CA"/>
+    <text x="125" y="44" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="15" fill="#FFF" text-anchor="middle">📱 Flutter Client (Desktop)</text>
+
+    <!-- Sub-elements -->
+    <rect x="20" y="80" width="210" height="50" rx="8" fill="#1E1B4B" stroke="#6366F1"/>
+    <text x="35" y="105" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A5B4FC">📁 File Picker Service</text>
+    <text x="35" y="122" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">PDF selection &amp; validation</text>
+
+    <rect x="20" y="145" width="210" height="50" rx="8" fill="#1E1B4B" stroke="#6366F1"/>
+    <text x="35" y="170" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A5B4FC">⚡ Process Lifecycle Manager</text>
+    <text x="35" y="187" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Auto-starts &amp; polls FastAPI</text>
+
+    <rect x="20" y="210" width="210" height="50" rx="8" fill="#1E1B4B" stroke="#6366F1"/>
+    <text x="35" y="235" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A5B4FC">💬 Chat &amp; Telemetry UI</text>
+    <text x="35" y="252" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Material 3, similarity scores</text>
+
+    <rect x="20" y="275" width="210" height="50" rx="8" fill="#1E1B4B" stroke="#6366F1"/>
+    <text x="35" y="300" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A5B4FC">🌐 HTTP Client</text>
+    <text x="35" y="317" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Multipart upload &amp; JSON /ask</text>
+  </g>
+
+  <!-- Connectors 1 to 2 -->
+  <g stroke="#38BDF8" stroke-width="2.5" fill="none">
+    <path d="M 290 190 L 370 190" marker-end="url(#arrow)"/>
+    <path d="M 370 270 L 290 270" stroke-dasharray="5 5"/>
+  </g>
+  <text x="330" y="180" font-family="'Segoe UI', sans-serif" font-size="11" fill="#38BDF8" text-anchor="middle">HTTP POST</text>
+  <text x="330" y="290" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">JSON Response</text>
+
+  <!-- COLUMN 2: FastAPI Gateway -->
+  <g transform="translate(370, 80)" filter="url(#shadowBox)">
+    <rect width="250" height="350" rx="16" fill="url(#fastapiCard)" stroke="#34D399" stroke-width="2"/>
+    <rect x="20" y="20" width="210" height="36" rx="8" fill="#047857"/>
+    <text x="125" y="44" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="15" fill="#FFF" text-anchor="middle">🚀 FastAPI Backend</text>
+
+    <rect x="20" y="80" width="210" height="50" rx="8" fill="#064E3B" stroke="#10B981"/>
+    <text x="35" y="105" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A7F3D0">📥 POST /upload</text>
+    <text x="35" y="122" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D1FAE5">pypdf &amp; recursive chunking</text>
+
+    <rect x="20" y="145" width="210" height="50" rx="8" fill="#064E3B" stroke="#10B981"/>
+    <text x="35" y="170" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A7F3D0">🔍 POST /ask</text>
+    <text x="35" y="187" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D1FAE5">Cosine similarity search</text>
+
+    <rect x="20" y="210" width="210" height="50" rx="8" fill="#064E3B" stroke="#10B981"/>
+    <text x="35" y="235" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A7F3D0">🩺 GET /status</text>
+    <text x="35" y="252" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D1FAE5">Health check &amp; readiness</text>
+
+    <rect x="20" y="275" width="210" height="50" rx="8" fill="#064E3B" stroke="#10B981"/>
+    <text x="35" y="300" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#A7F3D0">🛡️ Guardrail Dispatcher</text>
+    <text x="35" y="317" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D1FAE5">Threshold checks &amp; fallbacks</text>
+  </g>
+
+  <!-- Connectors 2 to 3 -->
+  <g stroke="#C084FC" stroke-width="2.5" fill="none">
+    <path d="M 620 190 L 700 190"/>
+    <path d="M 700 270 L 620 270" stroke-dasharray="5 5"/>
+  </g>
+  <text x="660" y="180" font-family="'Segoe UI', sans-serif" font-size="11" fill="#C084FC" text-anchor="middle">Context</text>
+  <text x="660" y="290" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Tokens/Scores</text>
+
+  <!-- COLUMN 3: AI Core Models -->
+  <g transform="translate(700, 80)" filter="url(#shadowBox)">
+    <rect width="260" height="350" rx="16" fill="url(#aiCard)" stroke="#C084FC" stroke-width="2"/>
+    <rect x="20" y="20" width="220" height="36" rx="8" fill="#6B21A8"/>
+    <text x="130" y="44" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="15" fill="#FFF" text-anchor="middle">🧠 Local AI Engine</text>
+
+    <rect x="20" y="80" width="220" height="50" rx="8" fill="#3B0764" stroke="#A855F7"/>
+    <text x="35" y="105" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E9D5FF">🧮 all-MiniLM-L6-v2</text>
+    <text x="35" y="122" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D8B4FE">SentenceTransformer vectors</text>
+
+    <rect x="20" y="145" width="220" height="50" rx="8" fill="#3B0764" stroke="#A855F7"/>
+    <text x="35" y="170" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E9D5FF">🤖 Qwen2.5-0.5B-Instruct</text>
+    <text x="35" y="187" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D8B4FE">Causal LM context answering</text>
+
+    <rect x="20" y="210" width="220" height="50" rx="8" fill="#3B0764" stroke="#A855F7"/>
+    <text x="35" y="235" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E9D5FF">⚖️ Cosine Similarity (0.30+)</text>
+    <text x="35" y="252" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D8B4FE">Dense retrieval ranking</text>
+
+    <rect x="20" y="275" width="220" height="50" rx="8" fill="#3B0764" stroke="#A855F7"/>
+    <text x="35" y="300" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E9D5FF">✅ Semantic Validator (0.35+)</text>
+    <text x="35" y="317" font-family="'Segoe UI', sans-serif" font-size="11" fill="#D8B4FE">Relevance &amp; anti-hallucination</text>
+  </g>
+</svg>

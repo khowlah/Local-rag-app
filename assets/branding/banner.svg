@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090714"/>
+      <stop offset="40%" stop-color="#110E2E"/>
+      <stop offset="80%" stop-color="#181342"/>
+      <stop offset="100%" stop-color="#0B091A"/>
+    </linearGradient>
+
+    <radialGradient id="glowPurple" cx="20%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glowCyan" cx="85%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E0E7FF"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <linearGradient id="brandBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+
+    <linearGradient id="chipGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#312E81" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <filter id="bannerShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#8B5CF6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+  <rect width="1200" height="420" fill="url(#glowPurple)"/>
+  <rect width="1200" height="420" fill="url(#glowCyan)"/>
+
+  <!-- Tech Grid Background Pattern -->
+  <g opacity="0.07" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="70" x2="1200" y2="70"/>
+    <line x1="0" y1="140" x2="1200" y2="140"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="280" x2="1200" y2="280"/>
+    <line x1="0" y1="350" x2="1200" y2="350"/>
+    <line x1="150" y1="0" x2="150" y2="420"/>
+    <line x1="300" y1="0" x2="300" y2="420"/>
+    <line x1="450" y1="0" x2="450" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+    <line x1="750" y1="0" x2="750" y2="420"/>
+    <line x1="900" y1="0" x2="900" y2="420"/>
+    <line x1="1050" y1="0" x2="1050" y2="420"/>
+  </g>
+
+  <!-- Left: Futuristic Logo Emblem -->
+  <g transform="translate(70, 75)" filter="url(#bannerShadow)">
+    <!-- Container Card -->
+    <rect x="0" y="0" width="270" height="270" rx="48" fill="#131033" stroke="url(#brandBorder)" stroke-width="3"/>
+    
+    <!-- PDF Document Silhouette -->
+    <path d="M75 55 H 155 L 195 95 V 205 C 195 212 189 218 182 218 H 75 C 68 218 62 212 62 205 V 68 C 62 61 68 55 75 55 Z" 
+          fill="#1E1B4B" stroke="#6366F1" stroke-width="2.5"/>
+    <path d="M 155 55 V 90 C 155 93 158 95 161 95 H 195 Z" fill="#2E2868" stroke="#6366F1" stroke-width="2"/>
+
+    <!-- Document Lines -->
+    <rect x="85" y="115" width="55" height="5" rx="2.5" fill="#4F46E5"/>
+    <rect x="85" y="130" width="75" height="5" rx="2.5" fill="#4F46E5" opacity="0.7"/>
+    <rect x="85" y="145" width="65" height="5" rx="2.5" fill="#4F46E5" opacity="0.7"/>
+
+    <!-- Neural Circuit Overlay -->
+    <circle cx="170" cy="175" r="5" fill="#06B6D4"/>
+    <circle cx="135" cy="190" r="4" fill="#A855F7"/>
+    <circle cx="195" cy="140" r="4" fill="#38BDF8"/>
+    <line x1="135" y1="190" x2="170" y2="175" stroke="#A855F7" stroke-width="1.8" stroke-dasharray="3 3"/>
+    <line x1="170" y1="175" x2="195" y2="140" stroke="#06B6D4" stroke-width="1.8"/>
+
+    <!-- AI Star Sparkle -->
+    <path d="M 170 175 Q 170 145 185 145 Q 170 145 170 115 Q 170 145 155 145 Q 170 145 170 175 Z" fill="#38BDF8"/>
+
+    <!-- Dual Badges at bottom -->
+    <rect x="75" y="178" width="46" height="22" rx="6" fill="url(#brandBorder)"/>
+    <text x="98" y="193" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="10.5" fill="#FFF" text-anchor="middle">PDF</text>
+    
+    <rect x="127" y="178" width="46" height="22" rx="6" fill="#10B981"/>
+    <text x="150" y="193" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="10.5" fill="#FFF" text-anchor="middle">RAG</text>
+  </g>
+
+  <!-- Right: Typography & Details -->
+  <g transform="translate(390, 75)">
+    <!-- Top Super-Tag -->
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="310" height="28" rx="14" fill="#1E1B4B" stroke="#6366F1" stroke-width="1.2"/>
+      <circle cx="14" cy="14" r="5" fill="#10B981"/>
+      <text x="30" y="19" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="12" fill="#A5B4FC" letter-spacing="1">LOCAL AI &amp; DOCUMENT INTELLIGENCE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="92" font-family="'Segoe UI', -apple-system, Roboto, sans-serif" font-weight="900" font-size="48" fill="url(#titleGrad)" letter-spacing="-0.5">
+      PDF RAG Assistant
+    </text>
+
+    <!-- Subtitle Arabic -->
+    <text x="0" y="134" font-family="'Cairo', 'Segoe UI', sans-serif" font-weight="700" font-size="20" fill="#38BDF8">
+      مساعد المستندات الذكي المعتمد على تقنية الاسترجاع المعزز بالتوليد (RAG)
+    </text>
+
+    <!-- Subtitle English description -->
+    <text x="0" y="165" font-family="'Segoe UI', sans-serif" font-weight="400" font-size="15" fill="#94A3B8">
+      Offline-capable Cross-Platform Flutter Desktop App powered by FastAPI, Qwen2.5 LLM, and MiniLM Embeddings.
+    </text>
+
+    <!-- Tech Stack Feature Pills -->
+    <g transform="translate(0, 205)">
+      <!-- Pill 1: Flutter -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="125" height="34" rx="17" fill="url(#chipGrad)" stroke="#38BDF8" stroke-width="1.2"/>
+        <text x="62" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E0F2FE" text-anchor="middle">⚡ Flutter 3</text>
+      </g>
+
+      <!-- Pill 2: FastAPI -->
+      <g transform="translate(135, 0)">
+        <rect x="0" y="0" width="115" height="34" rx="17" fill="url(#chipGrad)" stroke="#10B981" stroke-width="1.2"/>
+        <text x="57" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#D1FAE5" text-anchor="middle">🚀 FastAPI</text>
+      </g>
+
+      <!-- Pill 3: Qwen2.5 LLM -->
+      <g transform="translate(260, 0)">
+        <rect x="0" y="0" width="135" height="34" rx="17" fill="url(#chipGrad)" stroke="#A855F7" stroke-width="1.2"/>
+        <text x="67" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#F3E8FF" text-anchor="middle">🧠 Qwen2.5-0.5B</text>
+      </g>
+
+      <!-- Pill 4: MiniLM Embeddings -->
+      <g transform="translate(405, 0)">
+        <rect x="0" y="0" width="150" height="34" rx="17" fill="url(#chipGrad)" stroke="#818CF8" stroke-width="1.2"/>
+        <text x="75" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#E0E7FF" text-anchor="middle">🔍 all-MiniLM-L6-v2</text>
+      </g>
+
+      <!-- Pill 5: Guardrails -->
+      <g transform="translate(565, 0)">
+        <rect x="0" y="0" width="180" height="34" rx="17" fill="url(#chipGrad)" stroke="#F59E0B" stroke-width="1.2"/>
+        <text x="90" y="22" font-family="'Segoe UI', sans-serif" font-weight="600" font-size="13" fill="#FEF3C7" text-anchor="middle">🛡️ Semantic Validator</text>
+      </g>
+    </g>
+  </g>
+</svg>
