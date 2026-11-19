@@ -2,242 +2,213 @@
 
   <img src="assets/branding/banner.svg" alt="PDF RAG Assistant Banner" width="100%">
 
-  <br/>
+  <br/><br/>
 
-  <p align="center">
-    <strong>مساعد المستندات الذكي المعتمد على تقنية الاسترجاع المعزز بالتوليد (RAG) بدون إنترنت</strong><br/>
-    <em>Next-Generation Offline Document Intelligence &amp; Question-Answering Application</em>
+  <h1>Local RAG App — PDF Assistant</h1>
+  <p>
+    <strong>Next-Generation 100% Offline Document Intelligence &amp; Question-Answering Application</strong><br/>
+    <em>مساعد المستندات الذكي المعتمد على تقنية الاسترجاع المعزز بالتوليد (RAG) محلياً بدون إنترنت</em>
   </p>
 
   <p align="center">
-    <a href="#-نظرة-عامة-overview"><img src="https://img.shields.io/badge/Flutter-3.x_%7C_Dart-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" /></a>
-    <a href="#-نظرة-عامة-overview"><img src="https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
-    <a href="#-نماذج-الذكاء-الاصطناعي-ai-models--pipeline"><img src="https://img.shields.io/badge/LLM-Qwen2.5--0.5B-7952DE?style=for-the-badge&logo=huggingface&logoColor=white" alt="Qwen2.5" /></a>
-    <a href="#-نماذج-الذكاء-الاصطناعي-ai-models--pipeline"><img src="https://img.shields.io/badge/Embeddings-all--MiniLM--L6--v2-FF6F00?style=for-the-badge&logo=pytorch&logoColor=white" alt="MiniLM" /></a>
-    <a href="#-الهوية-البصرية-visual-identity"><img src="https://img.shields.io/badge/Design-Material_3-6750A4?style=for-the-badge&logo=materialdesign&logoColor=white" alt="Material 3" /></a>
-    <img src="https://img.shields.io/badge/Privacy-100%25_Offline_Local-10B981?style=for-the-badge&logo=securityscorecard&logoColor=white" alt="100% Offline" />
+    <a href="#-overview"><img src="https://img.shields.io/badge/Flutter-3.x_%7C_Dart-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" /></a>
+    <a href="#-overview"><img src="https://img.shields.io/badge/FastAPI-0.115+-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" /></a>
+    <a href="#-ai-models--rag-pipeline"><img src="https://img.shields.io/badge/LLM-Qwen2.5--0.5B-7952DE?style=for-the-badge&logo=huggingface&logoColor=white" alt="Qwen2.5" /></a>
+    <a href="#-ai-models--rag-pipeline"><img src="https://img.shields.io/badge/Embeddings-all--MiniLM--L6--v2-FF6F00?style=for-the-badge&logo=pytorch&logoColor=white" alt="MiniLM" /></a>
+    <a href="#-key-features"><img src="https://img.shields.io/badge/Privacy-100%25_Offline_Local-10B981?style=for-the-badge&logo=securityscorecard&logoColor=white" alt="100% Offline" /></a>
+    <a href="#-license"><img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" alt="MIT License" /></a>
   </p>
 
   <p align="center">
-    <a href="#-نظرة-عامة-overview">نظرة عامة</a> •
-    <a href="#-الهوية-البصرية-visual-identity">الهوية البصرية</a> •
-    <a href="#-المميزات-الرئيسية-key-features">المميزات الرئيسية</a> •
-    <a href="#-المعمارية-الهندسية-system-architecture">المعمارية الهندسية</a> •
-    <a href="#-نماذج-الذكاء-الاصطناعي-ai-models--pipeline">نماذج الذكاء الاصطناعي</a> •
-    <a href="#-دليل-التثبيت-والتشغيل-installation--quick-start">دليل التشغيل</a> •
-    <a href="#-توثيق-واجهة-api-reference">توثيق الـ API</a>
+    <a href="#-overview">Overview</a> •
+    <a href="#-key-features">Key Features</a> •
+    <a href="#-system-architecture">System Architecture</a> •
+    <a href="#-ai-models--rag-pipeline">AI Pipeline</a> •
+    <a href="#-quick-start--installation">Quick Start</a> •
+    <a href="#-api-reference">API Reference</a> •
+    <a href="#-about-the-developer">About the Developer</a>
   </p>
 
 </div>
 
 ---
 
-## 📌 نظرة عامة (Overview)
+## 📌 Overview | نظرة عامة
 
-تطبيق **PDF RAG Assistant** هو حل متكامل وقوي يجمع بين واجهة مستخدم مكتبية حديثة مبنية بإطار العمل **Flutter (Material 3)**، وخادم ذكاء اصطناعي محلي فائق السرعة معتمد على **FastAPI** و **PyTorch** و **HuggingFace Transformers**. 
+### English
+**Local RAG App (PDF Assistant)** is an end-to-end, privacy-first desktop application combining an elegant **Flutter (Material 3)** client with a high-performance local **FastAPI & PyTorch** backend. 
 
-تم تصميم التطبيق ليعمل بكفاءة وسرعة **محلياً بالكامل (100% Offline / On-Device)** دون الحاجة إلى إرسال أي مستندات أو بيانات حساسة إلى واجهات خارجية (مثل OpenAI أو Google Cloud). يعتمد النظام على تقنية **الاسترجاع المعزز بالتوليد (RAG - Retrieval-Augmented Generation)** للإجابة على الأسئلة الدقيقة الموجهة إلى مستندات الـ PDF مع طبقة تحقق دلالي متطورة لمنع الهلوسة (Anti-Hallucination Guardrail).
+The application is engineered to operate **completely offline (100% Local / On-Device)**. It guarantees that sensitive PDFs never leave the host machine. By leveraging state-of-the-art **Retrieval-Augmented Generation (RAG)**, dense semantic embeddings, and an in-memory vector similarity engine, users can query any document and receive instant, fact-grounded answers powered by a strictly constrained local language model (`Qwen2.5-0.5B-Instruct`), fortified by an automated **Semantic Answer Validation Guardrail**.
+
+### العربية
+تطبيق **Local RAG App** هو نظام متكامل ومحلي بالكامل يجمع بين واجهة مستخدم مكتبية حديثة مبنية بـ **Flutter (Material 3)** وخادم ذكاء اصطناعي محلي معتمد على **FastAPI** و **PyTorch** ونماذج **HuggingFace**.
+
+يعمل النظام دون أي اتصال خارجي بالإنترنت لحماية خصوصية المستندات 100%. يوفر استخراجاً دقيقاً للنصوص، وتقطيعاً دلالياً، ومحرك بحث بتشابه جيب التمام، مع توليد الإجابات عبر نموذج `Qwen2.5` وطبقة تحقق تمنع الهلوسة.
 
 <div align="center">
-  <img src="assets/branding/architecture.svg" alt="PDF RAG Assistant Architecture" width="95%">
+  <img src="assets/branding/architecture.svg" alt="System Architecture Overview" width="95%">
 </div>
 
 ---
 
-## 🎨 الهوية البصرية (Visual Identity)
+## 🚀 Key Features | المميزات الرئيسية
 
-تم بناء الهوية البصرية للمشروع بعناية لتعكس **الحداثة، الذكاء، والموثوقية التقنية**، مع دمج تدرجات الألوان العميقة والمستقبلية (Deep Cyber & AI Violet Palette):
+- **⚡ Automatic Backend Lifecycle Management:**  
+  The Flutter client automatically spawns the local Python FastAPI server (`uvicorn`) upon launch, monitors server health via periodic status polling, and cleanly terminates the process when exited.
+  *(إدارة دورة حياة الخادم تلقائياً عند فتح وإغلاق التطبيق).*
 
-<p align="center">
-  <img src="assets/branding/logo.svg" alt="PDF RAG Assistant Logo" width="160">
-</p>
+- **📄 Robust Document Ingestion & Chunking:**  
+  Extracts Arabic and English text using `pypdf`, chunked with `langchain_text_splitters.RecursiveCharacterTextSplitter` (chunk size: `500` characters, overlap: `100` characters) for coherent semantic preservation.
+  *(تقطيع المستندات بذكاء مع تداخل دلالي للحفاظ على ترابط المعنى).*
 
-### 1. فلسفة الشعار (Logo Concept)
-- **رمز المستند الذكي:** يعبر عن معالجة وقراءة ملفات الـ PDF والبيانات النصية بدقة.
-- **الشبكة العصبية والبريق الذكي (Neural Spark):** يرمز إلى الاستدلال وتوليد الإجابات الذكية بواسطة نموذج اللغة Qwen2.5.
-- **تدرج الألوان المتصل (Gradient Wave):** يعكس التدفق السلس للمعلومات من مرحلة الاستخراج إلى التضمين ثم الاسترجاع والتحقق.
+- **🔍 Dense Vector Semantic Retrieval:**  
+  Converts text chunks into dense numeric vectors using `sentence-transformers/all-MiniLM-L6-v2`. Computes cosine similarity with a minimum confidence threshold (`>= 0.30`) to retrieve only the most relevant context.
+  *(محرك استرجاع دلالي كثيف بتشابه جيب التمام).*
 
-### 2. لوحة الألوان الرسمية (Color Palette)
+- **🧠 Local LLM Generation (Zero Cloud Dependency):**  
+  Employs `Qwen/Qwen2.5-0.5B-Instruct` run natively on local CPU/GPU with PyTorch. Prompted with strict grounding rules to eliminate extrapolation and external knowledge hallucinations.
+  *(توليد إجابات دقيقة ومقيدة بالسياق فقط دون أي استهلاك لواجهات سحابية).*
 
-| اللون | كود Hex | الوظيفة الدلالية | الاستخدام في الواجهة |
-|:---:|:---:|:---:|:---|
-| <img src="https://via.placeholder.com/20/1E1B4B/1E1B4B.png" width="20" height="20" /> | `#1E1B4B` | **Deep Slate Navy** | الخلفيات الأساسية والعناصر المحيطية |
-| <img src="https://via.placeholder.com/20/6750A4/6750A4.png" width="20" height="20" /> | `#6750A4` | **Royal Violet** | اللون الأساسي للتطبيق (Primary Seed) والأزرار التفاعلية |
-| <img src="https://via.placeholder.com/20/06B6D4/06B6D4.png" width="20" height="20" /> | `#06B6D4` | **Electric Cyan** | مؤشرات التقدم، الروابط، وأبرز الإحصائيات |
-| <img src="https://via.placeholder.com/20/10B981/10B981.png" width="20" height="20" /> | `#10B981` | **Emerald Green** | إشارة جاهزية الخادم وحالة التحقق الإيجابي (Validated) |
-| <img src="https://via.placeholder.com/20/F59E0B/F59E0B.png" width="20" height="20" /> | `#F59E0B` | **Amber Warning** | شارة بدء التشغيل والانتظار لمعالجة المستند |
-| <img src="https://via.placeholder.com/20/EF4444/EF4444.png" width="20" height="20" /> | `#EF4444` | **Crimson Alert** | رسائل الخطأ والاستفسارات غير المتطابقة دلالياً |
+- **🛡️ Multi-Tier Semantic Guardrail & Anti-Hallucination:**  
+  Validates generated answers against the source context using a secondary cosine similarity check (`>= 0.35`) and scans for fallback rejection phrases.
+  *(صمام أمان وتحقق دلالي لضمان مصداقية الإجابات).*
 
-### 3. أسلوب الواجهات (UI/UX Principles)
-- **Material 3 Design Tokens:** تدرج هرمي واضح للحقول والبطاقات (Cards) مع حواف مستديرة (12-16px).
-- **Instant Telemetry Display:** عرض مباشر لدرجة التشابه (Cosine Similarity Score) وحالة التحقق من المصدر فور استلام الإجابة.
-- **Non-blocking Reactive States:** استجابة فورية لحالة رفع الملف، وجاهزية الموديل مع مؤشرات تحميل واضحة.
+- **📊 Real-Time Telemetry & Confidence Scoring:**  
+  Displays chunk counts, cosine similarity scores, validation statuses, and error diagnostics directly in the UI.
+  *(عرض مباشر لمؤشرات الدقة ودرجة التشابه في واجهة المستخدم).*
 
 ---
 
-## 🚀 المميزات الرئيسية (Key Features)
-
-- **⚡ إدارة تلقائية كاملة للباكيند (Lifecycle Process Auto-Start):**
-  يقوم تطبيق Flutter عند الإقلاع بتشغيل خادم FastAPI في الخلفية تلقائياً واختبار استجابته عبر فحص دوري، وإنهاء العملية بأمان عند إغلاق التطبيق.
-
-- **📄 معالجة وتقطيع المستندات بذكاء (Document Ingestion Engine):**
-  استخراج النصوص العربية والإنجليزية عبر مكتبة `pypdf`، ثم تجزئة المحتوى إلى كتل نصية دقيقة عبر `RecursiveCharacterTextSplitter` مع تداخل دلالي (Chunk Size: 500, Overlap: 100).
-
-- **🔍 استرجاع دلالي كثيف (Dense Semantic Retrieval):**
-  تحويل النصوص إلى متجهات عددية عبر نموذج التضمين العالمي `all-MiniLM-L6-v2`، ومطابقة الأسئلة مع أفضل المقاطع بواسطة خوارزمية جيب التمام (Cosine Similarity) مع حد أدنى للقبول (Threshold >= 0.30).
-
-- **🧠 توليد محلي عالي الكفاءة (Local LLM Inference):**
-  الاعتماد على نموذج `Qwen/Qwen2.5-0.5B-Instruct` المحسن للاستجابة المباشرة والالتزام الصارم بسياق المستند دون اختلاق أو تخمين.
-
-- **🛡️ طبقة حماية وتحقق مانعة للهلوسة (Semantic Answer Validator):**
-  فلترة الإجابة الناتجة ومقارنة معناها مع السياق الأصلي (Answer-Context Similarity >= 0.35)، مع رصد عبارات التراجع التلقائي لضمان عدم تقديم إجابات مضللة.
-
-- **📊 قياسات حية ومؤشرات دقيقة (Real-time Telemetry):**
-  عرض نسبة التشابه، وحالة التحقق الدلالي، وعدد الـ Chunks التي تم توليدها للملف مباشرة في واجهة المستخدم.
-
----
-
-## 🏗 المعمارية الهندسية (System Architecture)
+## 🏗 System Architecture | المعمارية الهندسية
 
 ```mermaid
 sequenceDiagram
     autonumber
-    actor User as المستخدم
+    actor User as User / المستخدم
     participant UI as Flutter Client (Desktop)
     participant API as FastAPI Server (Uvicorn)
-    participant Parser as Chunker & PyPDF
-    participant Embed as SentenceTransformer (all-MiniLM-L6-v2)
+    participant Parser as PyPDF & TextSplitter
+    participant Embed as SentenceTransformer (MiniLM)
     participant LLM as Qwen2.5-0.5B-Instruct
-    participant Val as Semantic Validator
+    participant Val as Semantic Guardrail Validator
 
-    Note over UI,API: الإقلاع الأوتوماتيكي والتحقق من الجاهزية
-    UI->>API: GET /status (Health Check)
+    Note over UI,API: Step 1: Automated Health Check & Readiness
+    UI->>API: GET /status
     API-->>UI: 200 OK (Server Ready)
 
-    Note over User,Embed: مرحلة رفع الملف وتوليد المتجهات (Ingestion)
-    User->>UI: اختيار ملف PDF ثم النقر على رفع
-    UI->>API: POST /upload (Multipart PDF File)
-    API->>Parser: استخراج النصوص وتقطيعها (RecursiveSplitter)
-    Parser-->>API: مصفوفة النصوص (Chunks)
-    API->>Embed: تشفير المقاطع إلى Embeddings
-    Embed-->>API: مصفوفة المتجهات (Tensors)
-    API-->>UI: تم الرفع بنجاح (عدد الـ Chunks)
+    Note over User,Embed: Step 2: PDF Upload & Vector Ingestion
+    User->>UI: Select PDF & Click "Upload PDF"
+    UI->>API: POST /upload (Multipart File)
+    API->>Parser: Extract text & chunk (500 chars / 100 overlap)
+    Parser-->>API: Chunks array
+    API->>Embed: Compute dense vector embeddings
+    Embed-->>API: Embeddings tensor
+    API-->>UI: Success (Chunks count: N)
 
-    Note over User,Val: مرحلة طرح السؤال والاسترجاع والتحقق (Query & RAG)
-    User->>UI: كتابة السؤال والنقر على Ask
+    Note over User,Val: Step 3: Query, Context Retrieval & Generation
+    User->>UI: Type query & Click "Ask"
     UI->>API: POST /ask {"question": "..."}
-    API->>Embed: تشفير السؤال (Query Embedding)
-    Embed-->>API: متجه السؤال
-    API->>API: حساب تشابه جيب التمام (Cosine Similarity)
-    alt تشابه < 0.30
-        API-->>UI: لم يتم العثور على الإجابة في المستند
-    else تشابه >= 0.30
-        API->>LLM: توليد الإجابة بالاعتماد على أفضل سياق
-        LLM-->>API: الإجابة الأولية المقترحة
-        API->>Val: التحقق الدلالي (Cosine Sim >= 0.35 + Fallback Filter)
-        Val-->>API: حالة التحقق (Validated: True/False)
-        API-->>UI: الإجابة النهائية + معامل التشابه + حالة التحقق
+    API->>Embed: Generate question vector
+    Embed-->>API: Query embedding
+    API->>API: Compute Cosine Similarity against all chunks
+    alt Similarity < 0.30
+        API-->>UI: "I couldn't find the answer in the provided document."
+    else Similarity >= 0.30
+        API->>LLM: Generate answer strictly grounded on context
+        LLM-->>API: Candidate response
+        API->>Val: Validate semantic consistency (Sim >= 0.35 + Fallback filter)
+        Val-->>API: Validation status (True / False)
+        API-->>UI: Final Answer + Similarity Score + Validation Flag
     end
-    UI->>User: عرض الإجابة والقياسات على الشاشة
+    UI->>User: Display Answer & Telemetry Metrics
 ```
 
 ---
 
-## 🧠 نماذج الذكاء الاصطناعي (AI Models & Pipeline)
+## 🧠 AI Models & RAG Pipeline | نماذج الذكاء الاصطناعي
 
-| المرحلة | النموذج / التقنية المستخدمة | الدور الهندسي | المواصفات |
-|:---|:---|:---|:---|
-| **تجزئة النصوص** | `langchain_text_splitters` | تقسيم المستندات الطويلة مع الحفاظ على ترابط المعنى | `chunk_size = 500`<br/>`chunk_overlap = 100` |
-| **نموذج التضمين** | `sentence-transformers/all-MiniLM-L6-v2` | تحويل المقاطع النصية إلى متجهات كثيفة (Dense Vectors) | أبعاد المتجه: `384`<br/>سريع جداً على المعالج المركزي (CPU) |
-| **محرك الاسترجاع** | `sklearn.metrics.pairwise.cosine_similarity` | البحث التناظري بين السؤال ومقاطع المستند | `MIN_SIMILARITY = 0.30`<br/>اختيار أفضل سياق بدقة |
-| **نموذج التوليد (LLM)** | `Qwen/Qwen2.5-0.5B-Instruct` | صياغة إجابة مباشرة ودقيقة استناداً إلى السياق فقط | بارامترات: `0.5 Billion`<br/>يعمل على الذاكرة المحلية بدون GPU خارجي |
-| **طبقة التحقق** | `Semantic Validator` | مطابقة الإجابة المنتجة بالسياق وتصفية أي هلوسة | `MIN_ANSWER_SIMILARITY = 0.35`<br/>استبعاد عبارات الرفض والشك |
-
----
-
-## 📥 دليل التثبيت والتشغيل (Installation & Quick Start)
-
-### المتطلبات الأساسية (Prerequisites)
-1. **Python 3.10 أو أحدث**: مثبت ومضاف إلى متغيرات البيئة (`PATH`).
-2. **Flutter SDK (3.11+)**: مثبت وجاهز لتطوير تطبيقات سطح المكتب.
-3. **أدوات C++ لسطح المكتب (Visual Studio C++ Build Tools)** إذا كنت تشغل المشروع على بيئة Windows.
+| Component | Model / Technology | Parameters / Dimension | Purpose & Description |
+|:---|:---|:---:|:---|
+| **Text Chunking** | `langchain_text_splitters` | Chunk: `500` / Overlap: `100` | Splits PDF stream into contextually balanced segments |
+| **Embedding Model** | `sentence-transformers/all-MiniLM-L6-v2` | `384` dimensions | Fast, high-accuracy dense vector representations |
+| **Retrieval Engine** | `sklearn.metrics.pairwise.cosine_similarity` | `threshold = 0.30` | In-memory similarity ranking for top context selection |
+| **Generative LLM** | `Qwen/Qwen2.5-0.5B-Instruct` | `0.5 Billion` parameters | Lightweight local LLM instructed to answer exclusively from context |
+| **Semantic Validator** | `SentenceTransformer` + Fallback Filter | `threshold = 0.35` | Anti-hallucination verification comparing answer vs context |
 
 ---
 
-### أولاً: إعداد خادم الذكاء الاصطناعي (Backend Setup)
+## 📥 Quick Start & Installation | دليل التثبيت والتشغيل
 
-1. انتقل إلى مجلد الباكيند:
-   ```bash
-   cd rag_pdf_app/bac/rag-prototype
-   ```
-
-2. أنشئ بيئة بايثون افتراضية وقم بتفعيلها:
-   ```bash
-   # إنشاء البيئة
-   python -m venv .venv
-
-   # التفعيل على Windows PowerShell
-   .venv\Scripts\Activate.ps1
-
-   # أو على CMD
-   .venv\Scripts\activate.bat
-   ```
-
-3. قم بتثبيت المكتبات المطلوبة:
-   ```bash
-   pip install --upgrade pip
-   pip install -r requirements.txt
-   ```
-
-4. *(اختياري)* يمكنك اختبار تشغيل الخادم منفرداً للتحقق:
-   ```bash
-   uvicorn api:app --host 127.0.0.1 --port 8000 --reload
-   ```
-   > 💡 **ملاحظة:** عند تشغيل التطبيق عبر Flutter، يقوم تطبيق Flutter بتشغيل هذا الأمر تلقائياً دون الحاجة لتشغيله يدوياً!
+### Prerequisites
+* **Python 3.10+**: Installed and available in your system `PATH`.
+* **Flutter SDK (3.11+)**: Installed and configured for Windows Desktop development.
+* **Visual Studio C++ Build Tools** (for Flutter Windows Desktop compilation).
 
 ---
 
-### ثانياً: تشغيل تطبيق الواجهة (Flutter Frontend)
+### Step 1: Setup Local Python Backend
 
-1. عد إلى المجلد الرئيسي لمشروع Flutter:
-   ```bash
-   cd rag_pdf_app
-   ```
+```bash
+# 1. Navigate to the backend directory
+cd bac/rag-prototype
 
-2. قم بتثبيت حزم Dart و Flutter:
-   ```bash
-   flutter pub get
-   ```
+# 2. Create and activate a virtual environment
+python -m venv .venv
 
-3. شغّل التطبيق لسطح المكتب (Windows Desktop):
-   ```bash
-   flutter run -d windows
-   ```
+# On Windows PowerShell:
+.venv\Scripts\Activate.ps1
+# On Windows CMD:
+.venv\Scripts\activate.bat
 
-4. بمجرد فتح التطبيق:
-   - ستظهر حالة الخادم خضراء: `RAG server is ready`.
-   - انقر على زر **"Choose PDF"** لاختيار أي مستند تريد الاستفسار عنه.
-   - انقر على **"Upload PDF"** ليتم تقطيع الملف وتوليد المتجهات له.
-   - اكتب سؤالك في خانة السؤال وانقر على **"Ask"** للحصول على الإجابة مع مؤشر دقة التشابه وحالة التحقق!
+# 3. Upgrade pip and install all required dependencies
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+> 💡 **Note:** Flutter automatically manages starting the FastAPI backend when the app opens. However, you can also run it independently for testing:
+> ```bash
+> uvicorn api:app --host 127.0.0.1 --port 8000 --reload
+> ```
 
 ---
 
-## ⚙️ توثيق واجهة (API Reference)
+### Step 2: Run Flutter Desktop Application
 
-يعمل الخادم المحلي على العنوان الافتراضي: `http://127.0.0.1:8000`
+```bash
+# 1. Return to the root of the project
+cd ../..
 
-### 1. فحص الصحة العامة (Root Check)
-- **Endpoint:** `GET /`
-- **Response:**
+# 2. Fetch Dart dependencies
+flutter pub get
+
+# 3. Run the Windows Desktop app
+flutter run -d windows
+```
+
+Once launched:
+1. The backend indicator turns green: **"RAG server is ready"**.
+2. Click **"Choose PDF"** to pick your document.
+3. Click **"Upload PDF"** to extract text and build vectors.
+4. Type your question and click **"Ask"** to receive instantaneous, verified answers!
+
+---
+
+## ⚙️ API Reference | توثيق نقاط الاتصال
+
+Default Local Base URL: `http://127.0.0.1:8000`
+
+### 1. Root Health Check
+* **`GET /`**
+* **Response:**
   ```json
   {
     "message": "PDF RAG Assistant API is running"
   }
   ```
 
-### 2. حالة جاهزية المستند (Document Status)
-- **Endpoint:** `GET /status`
-- **Response:**
+### 2. Document Status
+* **`GET /status`**
+* **Response:**
   ```json
   {
     "ready": true,
@@ -245,11 +216,10 @@ sequenceDiagram
   }
   ```
 
-### 3. رفع ومعالجة الـ PDF (Upload Document)
-- **Endpoint:** `POST /upload`
-- **Content-Type:** `multipart/form-data`
-- **Payload:** `file: [your_document.pdf]`
-- **Response:**
+### 3. Upload & Ingest PDF
+* **`POST /upload`**
+* **Content-Type:** `multipart/form-data`
+* **Response:**
   ```json
   {
     "message": "PDF uploaded successfully.",
@@ -258,20 +228,20 @@ sequenceDiagram
   }
   ```
 
-### 4. الاستعلام وطرح الأسئلة (Ask Question)
-- **Endpoint:** `POST /ask`
-- **Content-Type:** `application/json`
-- **Payload:**
+### 4. Query Document
+* **`POST /ask`**
+* **Content-Type:** `application/json`
+* **Body:**
   ```json
   {
-    "question": "ما هي الميزات الأساسية المذكورة في التقرير؟"
+    "question": "What are the main results highlighted in the report?"
   }
   ```
-- **Response:**
+* **Response:**
   ```json
   {
-    "answer": "الميزات الأساسية تشمل السرعة العالية، والأمان، ودعم اللغة العربية.",
-    "similarity": 0.7842,
+    "answer": "The report highlights high speed, data security, and Arabic support.",
+    "similarity": 0.8124,
     "validated": true,
     "source": 1
   }
@@ -279,63 +249,97 @@ sequenceDiagram
 
 ---
 
-## 📁 هيكل المشروع (Project Directory Tree)
+## 📁 Project Structure | هيكل المشروع
 
 ```text
-rag_pdf_app/
+Local-rag-app/
 ├── assets/
-│   └── branding/                 # أصول الهوية البصرية الرسمية
-│       ├── banner.svg            # بانر العرض والواجهة الرئيسية
-│       ├── logo.svg              # شعار وأيقونة المشروع الرسمية
-│       └── architecture.svg      # مخطط المعمارية الهندسية التفاعلي
+│   └── branding/                 # Visual identity & developer signature
+│       ├── banner.svg            # High-res project banner
+│       ├── logo.svg              # Vector app emblem
+│       ├── architecture.svg      # Interactive architecture diagram
+│       ├── khawlah-signature-animated.gif # Animated floral signature
+│       └── khawlah-signature.png # Static developer signature
 ├── bac/
-│   └── rag-prototype/            # الباكيند المحلي ومحركات الذكاء الاصطناعي
-│       ├── api.py                # خادم FastAPI وتوجيه الطلبات
-│       ├── chunker.py            # تقسيم وتجزئة النصوص
-│       ├── embedder.py           # إنشاء متجهات التضمين
-│       ├── generated.py          # استدعاء نموذج Qwen2.5 وتوليد الإجابات
-│       ├── pdf_reader.py         # استخراج النصوص من ملفات PDF
-│       ├── retriever.py          # محرك البحث الدلالي وحساب تشابه جيب التمام
-│       ├── answer_validator.py   # صمام الأمان والتحقق لمنع الهلوسة
-│       └── requirements.txt      # التبعيات البرمجية لبايثون
+│   └── rag-prototype/            # Local FastAPI & AI Engine
+│       ├── api.py                # FastAPI endpoints & routing
+│       ├── chunker.py            # Text splitting algorithms
+│       ├── embedder.py           # Vector embeddings generator
+│       ├── generated.py          # Qwen2.5 LLM inference & prompting
+│       ├── pdf_reader.py         # PyPDF text extraction
+│       ├── retriever.py          # Cosine similarity retrieval
+│       ├── answer_validator.py   # Anti-hallucination guardrail
+│       └── requirements.txt      # Python dependencies
 ├── lib/
-│   └── main.dart                 # واجهة المستخدم المبنية بفلاتر وإدارة دورة حياة الخادم
-├── pubspec.yaml                  # إعدادات وتبعية مشروع Flutter
-├── analysis_options.yaml         # قواعد الفحص والترميز لـ Dart
-└── README.md                     # التوثيق الشامل للمشروع
+│   └── main.dart                 # Flutter UI & Backend process manager
+├── pubspec.yaml                  # Flutter package & assets manifest
+├── analysis_options.yaml         # Linter rules
+└── README.md                     # Comprehensive project documentation
 ```
 
 ---
 
-## 🛡️ طبقة الحماية الدلالية (Semantic Guardrail)
-
-لمنع مشاكل الهلوسة الشائعة في النماذج اللغوية، يطبق **PDF RAG Assistant** نظام تحقق متعدد المستويات:
-1. **فلترة عبارات عدم المعرفة:** استبعاد إجابات التردد والرفض عبر قائمة عبارات مخصصة (`FALLBACK_PHRASES`).
-2. **التحقق من التشابه الدلالي بين الإجابة والسياق:** استخدام `validator_model` لحساب التشابه بين الإجابة المولدة وسياق الفقرة المسترجعة من الـ PDF، بحيث ترفض الإجابة إذا قل التشابه عن `0.35`.
-3. **تنبيه المستخدم الواضح:** إذا لم يتطابق السؤال مع محتوى المستند أو فشل التحقق، يستجيب النظام برسالة صريحة توضح أن المعلومة غير متوفرة في المستند المقدم بدلاً من توليد إجابة خاطئة.
-
----
-
-## 🤝 المساهمة والتطوير (Contributing)
-
-نرحب بكافة المساهمات والأفكار لتطوير هذا المشروع! يمكنك المساعدة في:
-- إضافة دعم لقواعد بيانات المتجهات الدائمة مثل (ChromaDB / SQLite Vector).
-- دعم معالجة عدة ملفات PDF في وقت واحد (Multi-Document Ingestion).
-- تمكين البث المباشر للكلمات (Streaming Token Generation).
-
-1. قم بعمل Fork للمستودع.
-2. أنشئ فرعاً لميزتك (`git checkout -b feature/AmazingFeature`).
-3. سجّل التعديلات (`git commit -m 'Add some AmazingFeature'`).
-4. ارفع الفرع إلى GitHub (`git push origin feature/AmazingFeature`).
-5. افتح طلب دمج (Pull Request).
-
----
-
-## 📄 الترخيص (License)
-
-هذا المشروع مرخص تحت رخصة **MIT** - يمكنك الاطلاع على ملف التراخيص لمزيد من التفاصيل والاستخدام الحر.
+<!-- 🌸 KHAWLAH AL-HEBSHI — DEVELOPER SIGNATURE -->
+## 👩‍💻 About the Developer | عن المطوّرة
 
 <div align="center">
-  <p>صُمم وتطور بكل إتقان 🚀</p>
-  <a href="#-نظرة-عامة-overview">الرجوع لأعلى الصفحة ⬆️</a>
+
+  <img
+    src="assets/branding/khawlah-signature-animated.gif"
+    alt="Animated floral developer signature for Khawlah Al-Hebshi"
+    width="760"
+  />
+
+  <br/>
+
+  <img src="https://readme-typing-svg.demolab.com?font=Georgia&weight=500&size=22&duration=2800&pause=900&color=9A3158&center=true&vCenter=true&width=650&lines=Backend+Developer+%7C+Next.js;Flutter+Developer;AI-Assisted+Development+%26+Vibe+Coding;Building+Thoughtful+Digital+Products" alt="Animated developer role text" />
+
+  <br/><br/>
+
+  <a href="https://github.com/khowlah">
+    <img src="https://img.shields.io/badge/GitHub-24111D?style=for-the-badge&logo=github&logoColor=E8BFD0" alt="GitHub"/>
+  </a>
+  <a href="https://linkedin.com/in/khawlah-al-hebshi-12046a38a">
+    <img src="https://img.shields.io/badge/LinkedIn-6B3154?style=for-the-badge&logo=linkedin&logoColor=FFFFFF" alt="LinkedIn"/>
+  </a>
+  <a href="https://khowlah.github.io/Myprotofile">
+    <img src="https://img.shields.io/badge/Portfolio-347F7B?style=for-the-badge&logo=firefox&logoColor=FFFFFF" alt="Portfolio"/>
+  </a>
+
+  <br/><br/>
+
+  <img src="https://img.shields.io/badge/Next.js-24111D?style=flat-square&logo=nextdotjs&logoColor=F7EAF0" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Flutter-347F7B?style=flat-square&logo=flutter&logoColor=FFFFFF" alt="Flutter"/>
+  <img src="https://img.shields.io/badge/AI-9A3158?style=flat-square&logo=openai&logoColor=FFFFFF" alt="AI"/>
+  <img src="https://img.shields.io/badge/Vibe_Coding-C49A52?style=flat-square&logo=visualstudiocode&logoColor=24111D" alt="Vibe Coding"/>
+
+  <br/><br/>
+
+  <i>Designed with curiosity. Built with purpose.</i>
+  <br/>
+  <sub>✦ A little signature from Khawlah ✦</sub>
+
+</div>
+
+<br/>
+
+### English
+I'm **Khawlah Al-Hebshi**, a Software Engineering graduate working across backend development with **Next.js** and cross-platform applications with **Flutter**. I bring together software engineering, product thinking, and AI-assisted workflows to build practical, impactful digital experiences.
+
+I use AI and vibe coding as core accelerators in the development process, while keeping relentless focus on clean architecture, sound problem-solving, and products that serve real human needs.
+
+### العربية
+أنا **خولة الحيشي**، خريجة هندسة برمجيات أعمل على تطوير الأنظمة الخلفية عبر **Next.js** والتطبيقات متعددة المنصات عبر **Flutter**. أدمج بين المبادئ الهندسية المتينة، والتفكير المتمحور حول المنتج، ومسارات العمل المدعومة بالذكاء الاصطناعي لبناء تجارب رقمية عملية ومتقنة.
+
+أعتمد على الذكاء الاصطناعي وتقنيات البرمجة التفاعلية (Vibe Coding) كأدوات تسريع وتطوير فعالة، مع التركيز الدائم على الهيكلة البرمجية النظيفة، والحل المبتكر للمشكلات، وتطوير منتجات تخدم الاحتياجات الحقيقية.
+
+---
+
+## 📄 License | الترخيص
+
+This project is open-source and distributed under the **MIT License**. See the `LICENSE` file for more details.
+
+<div align="center">
+  <sub>Built with care &amp; precision by Khawlah Al-Hebshi 🚀</sub><br/>
+  <a href="#local-rag-app--pdf-assistant">Back to Top ⬆️</a>
 </div>
