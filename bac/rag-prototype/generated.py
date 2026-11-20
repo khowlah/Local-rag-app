@@ -53,7 +53,8 @@ def generate_answer(question, context):
                 "4. Do not add details that are not in the Context.\n"
                 "5. Do not rewrite the entire Context.\n"
                 "6. Give one short direct answer.\n"
-                "7. If the answer is not clearly available, say:\n"
+                "7. Always answer in the same language as the Question (if the question is in Arabic, reply in Arabic; if in English, reply in English).\n"
+                "8. If the answer is not clearly available, say:\n"
                 "\"I couldn't find the answer in the provided document.\""
             )
         },
@@ -144,7 +145,10 @@ def generate_answer(question, context):
         "I couldn't find the answer",
         "I could not find the answer",
         "not found in the document",
-        "not provided in the document"
+        "not provided in the document",
+        "لم أتمكن من العثور",
+        "غير موجود في المستند",
+        "لم أجد"
     ]
 
     for phrase in fallback_checks:

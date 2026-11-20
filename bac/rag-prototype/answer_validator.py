@@ -32,7 +32,13 @@ FALLBACK_PHRASES = [
     "not found in the document",
     "not provided in the document",
     "not present in the document",
-    "I don't know"
+    "I don't know",
+    "لم أتمكن من العثور على الإجابة",
+    "لم أجد الإجابة",
+    "غير موجود في المستند",
+    "غير مذكور في المستند",
+    "لا يوجد في المستند",
+    "لا أعلم"
 ]
 
 

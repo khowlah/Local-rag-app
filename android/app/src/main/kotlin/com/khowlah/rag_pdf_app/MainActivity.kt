@@ -1,4 +1,4 @@
-package com.example.rag_pdf_app
+package com.khowlah.rag_pdf_app
 
 import io.flutter.embedding.android.FlutterActivity
 
